@@ -25,6 +25,42 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8CA-3D-8cD">
                                 <rect key="frame" x="0.0" y="65" width="414" height="743"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="157" id="JU1-cS-b3H" customClass="CategoryCell" customModule="CoderSwag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="157"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JU1-cS-b3H" id="q7o-io-Hrg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="pmI-5G-FlL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoodies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbX-LQ-hBQ">
+                                                    <rect key="frame" x="129" y="64.5" width="156" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="156" id="4pW-1Y-HpY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pmI-5G-FlL" firstAttribute="top" secondItem="q7o-io-Hrg" secondAttribute="top" id="HGa-G8-rjg"/>
+                                                <constraint firstAttribute="trailing" secondItem="pmI-5G-FlL" secondAttribute="trailing" id="Pza-D2-ZRd"/>
+                                                <constraint firstItem="PbX-LQ-hBQ" firstAttribute="centerY" secondItem="q7o-io-Hrg" secondAttribute="centerY" id="V5l-mR-Rxw"/>
+                                                <constraint firstAttribute="bottom" secondItem="pmI-5G-FlL" secondAttribute="bottom" id="kbE-k1-1iz"/>
+                                                <constraint firstItem="PbX-LQ-hBQ" firstAttribute="centerX" secondItem="q7o-io-Hrg" secondAttribute="centerX" id="llG-Fv-kGD"/>
+                                                <constraint firstItem="pmI-5G-FlL" firstAttribute="leading" secondItem="q7o-io-Hrg" secondAttribute="leading" id="qdc-Yh-04l"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="pmI-5G-FlL" id="zJh-Gv-dtf"/>
+                                            <outlet property="categoryTitle" destination="PbX-LQ-hBQ" id="oAR-mJ-gSv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,6 +75,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CODERSWAG" id="Ttm-dU-qEy"/>
+                    <connections>
+                        <outlet property="categoryTable" destination="8CA-3D-8cD" id="frQ-R8-r5x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,6 +107,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="digital" width="1024" height="703"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

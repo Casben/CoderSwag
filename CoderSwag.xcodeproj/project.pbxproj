@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB5D3E64261961D700026D88 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5D3E63261961D700026D88 /* CategoryCell.swift */; };
 		CBD552F72616D24700B8864D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD552F62616D24700B8864D /* AppDelegate.swift */; };
 		CBD552F92616D24700B8864D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD552F82616D24700B8864D /* SceneDelegate.swift */; };
 		CBD552FB2616D24700B8864D /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD552FA2616D24700B8864D /* CategoriesVC.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB5D3E63261961D700026D88 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		CBD552F32616D24700B8864D /* CoderSwag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoderSwag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD552F62616D24700B8864D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBD552F82616D24700B8864D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB5D3E5F2619615D00026D88 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CBD552FA2616D24700B8864D /* CategoriesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB5D3E602619616500026D88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB5D3E612619616C00026D88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB5D3E63261961D700026D88 /* CategoryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CBD552EA2616D24700B8864D = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +81,11 @@
 		CBD552F52616D24700B8864D /* CoderSwag */ = {
 			isa = PBXGroup;
 			children = (
+				CB5D3E612619616C00026D88 /* View */,
+				CB5D3E602619616500026D88 /* Model */,
+				CB5D3E5F2619615D00026D88 /* Controller */,
 				CBD552F62616D24700B8864D /* AppDelegate.swift */,
 				CBD552F82616D24700B8864D /* SceneDelegate.swift */,
-				CBD552FA2616D24700B8864D /* CategoriesVC.swift */,
 				CBD552FC2616D24700B8864D /* Main.storyboard */,
 				CBD552FF2616D24800B8864D /* Assets.xcassets */,
 				CBD553012616D24800B8864D /* LaunchScreen.storyboard */,
@@ -140,6 +167,7 @@
 				CBD552FB2616D24700B8864D /* CategoriesVC.swift in Sources */,
 				CBD552F72616D24700B8864D /* AppDelegate.swift in Sources */,
 				CBD552F92616D24700B8864D /* SceneDelegate.swift in Sources */,
+				CB5D3E64261961D700026D88 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
