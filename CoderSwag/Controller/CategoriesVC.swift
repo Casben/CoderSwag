@@ -44,4 +44,8 @@ extension CategoriesVC: UITableViewDataSource, UITableViewDelegate {
             return CategoryCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
 }
