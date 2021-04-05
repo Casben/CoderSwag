@@ -26,8 +26,17 @@ class CategoriesVC: UIViewController {
         categoryTable.dataSource = self
         categoryTable.delegate = self
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let barButton = UIBarButtonItem()
+        barButton.title = ""
+        navigationItem.backBarButtonItem = barButton
+        
+        if let productsVC = segue.destination as? ProductsVC {
+            assert(sender as? Category != nil)
+            productsVC.initProducts(sender as! Category)
+        }
+    }
 }
 
 extension CategoriesVC: UITableViewDataSource, UITableViewDelegate {
@@ -40,12 +49,12 @@ extension CategoriesVC: UITableViewDataSource, UITableViewDelegate {
             let category = DataService.instance.getCategories()[indexPath.row]
             cell.updateViews(category: category)
             return cell
-        } else {
-            return CategoryCell()
         }
+        return CategoryCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        let cateogy = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "productsVC", sender: cateogy)
     }
 }
