@@ -28,16 +28,18 @@ class CategoriesVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let barButton = UIBarButtonItem()
-        barButton.title = ""
-        navigationItem.backBarButtonItem = barButton
         
         if let productsVC = segue.destination as? ProductsVC {
+            let barButton = UIBarButtonItem()
+            barButton.title = ""
+            navigationItem.backBarButtonItem = barButton
             assert(sender as? Category != nil)
             productsVC.initProducts(sender as! Category)
         }
     }
 }
+
+//MARK: - UITableViewDataSource & UITableViewDelegate 
 
 extension CategoriesVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
